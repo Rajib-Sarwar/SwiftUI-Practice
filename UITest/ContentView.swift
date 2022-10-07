@@ -9,13 +9,55 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ZStack {
+            Image("background")
+                .edgesIgnoringSafeArea(.all)
+            
+            VStack {
+                Spacer()
+                Image("logo")
+                Spacer()
+                HStack {
+                    Spacer()
+                    Image("card3")
+                    Spacer()
+                    Image("card4")
+                    Spacer()
+                }
+                Spacer()
+                Image("dealbutton")
+                Spacer()
+                HStack {
+                    Spacer()
+                    VStack {
+                        Text("Player")
+                            .foregroundColor(.white)
+                            .fontWeight(.bold)
+                        Text("0")
+                            .foregroundColor(.white)
+                            .fontWeight(.bold)
+                    }
+                    Spacer()
+                    VStack {
+                        Text("CPU")
+                            .foregroundColor(.white)
+                            .fontWeight(.bold)
+                        Text("0")
+                            .foregroundColor(.white)
+                            .fontWeight(.bold)
+                    }
+                    Spacer()
+                }
+                Spacer()
+            }
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Group {
+            ContentView()
+        }
     }
 }
